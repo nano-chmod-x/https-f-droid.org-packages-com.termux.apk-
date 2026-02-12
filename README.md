@@ -1,6 +1,16 @@
 # https-f-droid.org-packages-com.termux.apk-
 https://f-droid.org/packages/com.termux.apk
+```
+# REBUILD THE BRIDGE
+mkdir -p /data/data/com.offsec.nhterm/files/usr/bin/
+echo -e "#!/system/bin/sh\nam start -n com.termux/.TermuxActivity" > /data/data/com.offsec.nhterm/files/usr/bin/kali
+chmod 755 /data/data/com.offsec.nhterm/files/usr/bin/kali
 
+# FIX THE ENVIRONMENT
+export HOME=/data/data/com.termux/files/home
+export PATH=$PATH:/data/data/com.termux/files/usr/bi
+n
+```
 ```bash
 # Create the repository folder in Kali's local storage
 mkdir -p /data/local/nh-system/files/apk
